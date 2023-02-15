@@ -1,10 +1,22 @@
 <template lang="pug">
 div#parent-div()
-  q-toolbar#main-app-toolbar(elevated)
+  q-toolbar#main-app-toolbar
     span#main-app-title Node App
-    q-tabs#route-tabs(v-model="tab")
-      q-route-tab(name="home" label="Home" to="/" exact)
-      q-route-tab(name="about" label="About" to="/about" exact)
+    q-tabs#route-tabs(
+      v-model="tab"
+    )
+      q-route-tab(
+        exact
+        label="Users" 
+        name="users" 
+        to="/" 
+      )
+      q-route-tab(
+        exact
+        label="About" 
+        name="about" 
+        to="/about" 
+      )
     q-space
   RouterView
 </template>
@@ -12,14 +24,7 @@ div#parent-div()
 <script setup>
 import { RouterView } from "vue-router";
 import { ref } from 'vue'
-import router from './router/index.js';
 
-const tab = ref("home");
-
-function navTo(route) {
-  router.push('/' + route);
-  console.log(route);
-}
 </script>
 
 <style scoped>
