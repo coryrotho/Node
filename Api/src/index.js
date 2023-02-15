@@ -2,26 +2,25 @@ import sql from 'mssql';
 import Joi from 'joi';
 import { app, config } from './server.js';
 
+// app.get('/user/getAllUsers', (req, res) => {
+//     // connect to your database
+//     sql.connect(config, function (err) {
 
-app.get('/getAllUsers', (req, res) => {
-    // connect to your database
-    sql.connect(config, function (err) {
+//         if (err) console.log(err);
 
-        if (err) console.log(err);
-
-        // create Request object
-        var request = new sql.Request();
+//         // create Request object
+//         var request = new sql.Request();
             
-        // query to the database and get the records
-        request.query('select * from SEC.Users', function (err, recordset) {
+//         // query to the database and get the records
+//         request.query('select * from SEC.Users', function (err, recordset) {
             
-            if (err) console.log(err)
+//             if (err) console.log(err)
 
-            // send records as a response
-            res.send(recordset);    
-        });
-    });
-});
+//             // send records as a response
+//             res.send(recordset);    
+//         });
+//     });
+// });
 
 
 // const courses = [

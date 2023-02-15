@@ -1,12 +1,16 @@
-<template>
-  <div> Home View </div>
-  <HomeComponent/>
+<template lang="pug">
+div#home-div
+  UserComponent
 </template>
 
 <script setup>
-import HomeComponent from '../components/HomeComponent.vue';
+import UserComponent from '../components/UserComponent.vue';
 
 </script>
 
 <style>
+#home-div {
+  width: 100vw;
+  height: 100vh;
+}
 </style>
