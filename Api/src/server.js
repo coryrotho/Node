@@ -1,5 +1,6 @@
 import express from 'express';
-import { UserApi } from './concepts/users.js';
+// import { UserRoutes } from './concepts/user.js';
+import { UserApi } from './concepts/user.js';
 import cors from 'cors';
 
 export const config = {
@@ -23,4 +24,4 @@ app.listen(port, () => {
     console.log(`Listening on Port ${port}`)
 });
 
-new UserApi(app, config);
+UserApi(app,config);
